@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#ffffff"
+        android:id="@+id/ImageContainer">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/OCRTextView"
+            android:id="@+id/imageView"/>
+            //android:src="@drawable/s1full"
+        <ScrollView
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@id/imageView"
+            android:padding="10dp"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="여기에 결과가 출력됩니다."
+                android:id="@+id/OCRTextView"
+                android:textSize="10dp"
+                android:textColor="#169cdf"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="#fff"
+                android:textIsSelectable="true"
+                />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/ImageContainer"
+        android:onClick="processImage"
+        android:background="#166e78"
+        android:id="@+id/OCRButtonContainer"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/selectimageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="SELECT Image"
+            android:textSize= "10dp"
+            android:textColor="#ffffff"
+            android:clickable="true"
+            android:onClick="selectImage"
+            android:layout_weight="1"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/runTextview"
+            android:text="RUN OCR"
+            android:textSize= "10dp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:onClick="processImage"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/changeActivitybutton"
+            android:text="changeActivity"
+            android:textSize= "10dp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:onClick="changeActivity"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/runTextview"
+        android:clickable="true">
+
+        <Button
+            android:id="@+id/insert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="추가" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="삭제" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수정" />
+
+        <Button
+            android:id="@+id/select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="조회" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+
+
+</LinearLayout>
