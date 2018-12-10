@@ -3,14 +3,11 @@ package andbook.example.ocr_test;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.googlecode.tesseract.android.TessBaseAPI;
@@ -23,8 +20,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import gun0912.tedbottompicker.TedBottomPicker;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         // 테이블에 있는 모든 데이터 출력
         final TextView result = (TextView) findViewById(R.id.result);
 
+
+
+
         // DB에 데이터 추가
         Button insert = (Button) findViewById(R.id.insert);
         insert.setOnClickListener(new View.OnClickListener() {
@@ -92,31 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    //select image
-    public void selectImage(View view){
-        TedBottomPicker tedBottomPicker = new TedBottomPicker.Builder(MainActivity.this)
-                .setOnImageSelectedListener(new TedBottomPicker.OnImageSelectedListener() {
-                    @Override
-                    public void onImageSelected(Uri uri) {
-                        // here is selected uri
-                        ImageView imageview2=(ImageView) findViewById(R.id.imageView);
-                        try {
-                            image = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                            imageview2.setImageBitmap(image);
 
-                        } catch (FileNotFoundException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        } catch (IOException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }
-                    }
-                })
-                .create();
-        tedBottomPicker.show(getSupportFragmentManager());
-
-    }
     //Process an Image
     public void processImage(View view) {
         mTess.setImage(image);

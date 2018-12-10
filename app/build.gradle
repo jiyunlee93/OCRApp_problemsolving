@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "andbook.example.ocr_test"
-        minSdkVersion 16
+        minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -26,5 +26,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.rmtheis:tess-two:5.4.1'
-    implementation 'gun0912.ted:tedbottompicker:1.2.6'
 }

@@ -14,8 +14,8 @@
             android:layout_width="170dp"
             android:layout_height="match_parent"
             android:layout_alignLeft="@id/OCRTextView"
-            android:id="@+id/imageView"/>
-            //android:src="@drawable/s1full"
+            android:id="@+id/imageView"
+            android:src="@drawable/s1full"/>
         <ScrollView
             android:layout_width="170dp"
             android:layout_height="match_parent"
@@ -41,23 +41,14 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_below="@id/ImageContainer"
+        android:clickable="true"
         android:onClick="processImage"
         android:background="#166e78"
-        android:id="@+id/OCRButtonContainer"
-        android:orientation="horizontal">
-        //android:clickable="true"
-        <Button
-            android:id="@+id/selectimageView"
+        android:id="@+id/OCRButtonContainer">
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="SELECT Image"
-            android:textSize= "10dp"
-            android:textColor="#ffffff"
-            android:clickable="true"
-            android:onClick="selectImage"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:id="@+id/runTextview"
             android:text="RUN OCR"
             android:textSize= "10dp"
@@ -66,6 +57,7 @@
             android:layout_centerHorizontal="true"
             android:clickable="true"
             android:onClick="processImage"/>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
