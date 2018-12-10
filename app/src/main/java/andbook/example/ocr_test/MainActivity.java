@@ -9,6 +9,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -90,29 +91,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-    }
-    //change Activity
-    public void makeProblem(View view) {
-        //////
-        TextView problemTextView = (TextView) findViewById(R.id.problemText);
-        String fulltext=problemTextView.getText().toString();
-        final ISOProblem prob1 = new ISOProblem(fulltext);
-        prob1.isolateFull();
-        ((TextView) findViewById(R.id.problemView)).setText(prob1.problem);
-        ((TextView) findViewById(R.id.buttonA)).setText(prob1.answerA);
-        ((TextView) findViewById(R.id.buttonB)).setText(prob1.answerB);
-        ((TextView) findViewById(R.id.buttonC)).setText(prob1.answerC);
-        ((TextView) findViewById(R.id.buttonD)).setText(prob1.answerD);
-    }
-    //change Activity
-    public void backMain(View view) {
-        setContentView(R.layout.activity_main);
-    }
-    //change Activity
-    public void changeActivity(View view) {
-        setContentView(R.layout.problem_1);
-        TextView problemTextView = (TextView) findViewById(R.id.problemText);
-        problemTextView.setText(OCRresult);
     }
     //select image
     public void selectImage(View view){

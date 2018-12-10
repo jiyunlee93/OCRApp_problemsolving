@@ -20,8 +20,7 @@
             android:layout_width="170dp"
             android:layout_height="match_parent"
             android:layout_alignRight="@id/imageView"
-            android:padding="10dp"
-            android:clickable="true">
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -33,7 +32,6 @@
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:background="#fff"
-                android:textIsSelectable="true"
                 />
         </ScrollView>
 
@@ -47,20 +45,19 @@
         android:background="#166e78"
         android:id="@+id/OCRButtonContainer"
         android:orientation="horizontal">
+        //android:clickable="true"
         <Button
             android:id="@+id/selectimageView"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
             android:text="SELECT Image"
             android:textSize= "10dp"
             android:textColor="#ffffff"
             android:clickable="true"
-            android:onClick="selectImage"
-            android:layout_weight="1"
-            />
+            android:onClick="selectImage"/>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
             android:id="@+id/runTextview"
             android:text="RUN OCR"
             android:textSize= "10dp"
@@ -68,27 +65,13 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:clickable="true"
-            android:onClick="processImage"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/changeActivitybutton"
-            android:text="changeActivity"
-            android:textSize= "10dp"
-            android:textColor="#ffffff"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:clickable="true"
-            android:onClick="changeActivity"
-            android:layout_weight="1"/>
+            android:onClick="processImage"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_below="@id/runTextview"
-        android:clickable="true">
+        android:layout_below="@id/runTextview">
 
         <Button
             android:id="@+id/insert"
