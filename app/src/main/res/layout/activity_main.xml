@@ -9,13 +9,12 @@
         android:layout_height="250dp"
         android:background="#ffffff"
         android:id="@+id/ImageContainer">
-
         <ImageView
             android:layout_width="170dp"
             android:layout_height="match_parent"
             android:layout_alignLeft="@id/OCRTextView"
-            android:id="@+id/imageView"/>
-            //android:src="@drawable/s1full"
+            android:id="@+id/imageView"
+            android:text="click to add paper" />
         <ScrollView
             android:layout_width="170dp"
             android:layout_height="match_parent"
@@ -43,7 +42,6 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_below="@id/ImageContainer"
-        android:onClick="processImage"
         android:background="#166e78"
         android:id="@+id/OCRButtonContainer"
         android:orientation="horizontal">
@@ -55,7 +53,7 @@
             android:textSize= "10dp"
             android:textColor="#ffffff"
             android:clickable="true"
-            android:onClick="selectImage"
+            android:onClick="selectImage2"
             android:layout_weight="1"
             />
         <Button
@@ -85,26 +83,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btn_sepPro"
-            android:text="separate"
+            android:id="@+id/btn_solveBack"
+            android:text="back"
             android:textSize= "10dp"
             android:textColor="#ffffff"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:clickable="true"
-            android:onClick="separateProblem"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/btn_temp"
-            android:text="check"
-            android:textSize= "10dp"
-            android:textColor="#ffffff"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:clickable="true"
-            android:onClick="tempFunc"
+            android:onClick="onClick"
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
@@ -119,13 +104,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="추가" />
+            android:text="추가"
+            android:onClick="insertDB"/>
 
         <Button
             android:id="@+id/delete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="deleteDB"
             android:text="삭제" />
 
         <Button
@@ -140,15 +127,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="조회" />
-
+            android:text="조회"
+            android:onClick="selectDB"/>
     </LinearLayout>
 
     <ScrollView
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <TextView
             android:id="@+id/result"
             android:layout_width="wrap_content"

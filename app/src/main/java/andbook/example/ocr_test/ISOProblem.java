@@ -23,7 +23,9 @@ public class ISOProblem {
         for (int i=0; i<temp.length;i++){
             switch(i){
                 case 0 :
-                    problem=temp[0];
+                    temp[0]=temp[0].replaceAll("_","_______");
+                    problem=temp[0].replaceAll("\n"," ");
+
                     break;
                 case 1 :
                     answerA=temp[1];

@@ -25,13 +25,29 @@
             android:orientation="vertical">
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:text="back"
                 android:onClick="backMain"
                 android:id="@+id/backMainButton"/>
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="next"
+                android:onClick="tempFunc"
+                android:id="@+id/btnNext"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="openDB"
+                android:onClick="openDB"
+                android:id="@+id/btnInsertDB"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:text="MAKE"
                 android:onClick="makeProblem"/>
         </LinearLayout>
